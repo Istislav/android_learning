@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Quotes</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="clickHere">Click here!</string>
+    <string name="buttonNextActivText">Open next activity</string>
+    <string name="textForCenterNextAct">Second Activity</string>
+    <string name="backBtnText">Go Back</string>
+    <string name="openThirdActivityBtn">Open Third Activity</string>
+</resources>
