@@ -2,6 +2,7 @@ package ru.istislav.quotes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,14 +29,24 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        Intent openingIntent = new Intent(ThirdActivity.this, BioActivity.class);
+
         switch (v.getId()) {
             case R.id.tsoyImageView:
                 Toast.makeText(ThirdActivity.this, "Tsoy", Toast.LENGTH_SHORT).show();
+
+                openingIntent.putExtra("name", "Victor Tsoy");
+                openingIntent.putExtra("bio", "Greatest rock-musiciant all over the world");
+
                 break;
             case R.id.ussrImageView:
                 Toast.makeText(ThirdActivity.this, "Ussr", Toast.LENGTH_SHORT).show();
-                break;
 
+                openingIntent.putExtra("name", "USSR");
+                openingIntent.putExtra("bio", "United States of Soviet Republics");
+                break;
         }
+
+        startActivity(openingIntent);
     }
 }
