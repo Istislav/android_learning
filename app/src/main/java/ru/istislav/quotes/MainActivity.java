@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button quoteButton;
     private Button nextActButton;
     private Button thirdActButton;
+    private Button recycleActButton;
     private TextView quoteTextView;
     private final int REQUEST_CODE = 2;
 
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         quoteButton = findViewById(R.id.quoteButton);
         nextActButton = findViewById(R.id.buttonNexActiv);
         thirdActButton = findViewById(R.id.thirdActivityButton);
+        recycleActButton = findViewById(R.id.recycleViewActButton);
 
         Toast.makeText(MainActivity.this, "On Create made", Toast.LENGTH_SHORT).show();
 
@@ -55,6 +57,14 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  Intent intent = new Intent(MainActivity.this, ThirdActivity.class);
+                 startActivity(intent);
+             }
+        });
+
+        recycleActButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent = new Intent(MainActivity.this, RecycleViewActivity.class);
                  startActivity(intent);
              }
         });
