@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +39,8 @@ public class BioActivity extends AppCompatActivity {
     }
 
     public void setUp(String name, String bio) {
+        Log.d("BioSETUP", "we have runned setUp function - debug"); //debug
+        Log.v("BioSETUP", "we have runned setUp function - verbose"); //verbose
         if(name.equals("Victor Tsoy")) {
             objImageView.setImageDrawable(getResources().getDrawable(R.drawable.viktor_tsoi_emblem));
         }else if(name.equals("USSR")) {
